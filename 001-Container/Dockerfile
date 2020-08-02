@@ -1,6 +1,8 @@
 # declaration of NEXUS_VERSION must appear before first FROM command
 # see: https://docs.docker.com/engine/reference/builder/#understand-how-arg-and-from-interact
 
+LABEL maintainer="Mochamad Taufik Romdony <email@taufikromdony.com>"
+
 ARG NEXUS_VERSION=latest
 
 FROM sonatype/nexus3:$NEXUS_VERSION
