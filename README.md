@@ -6,12 +6,12 @@ The objective is to run a Nexus application on GCP Kubernetes that can save the 
 ## Requirements
 
 - Enable Container Registry, Kubernetes Engine, and Cloud Resource Manager API
-- [Docker] (https://docs.docker.com/get-docker/)
-- [Terraform] (https://learn.hashicorp.com/terraform/getting-started/install.html) create the Cloud Storage Bucket and the Kubernetes Cluster 
+- [Docker](https://docs.docker.com/get-docker/)
+- [Terraform](https://learn.hashicorp.com/terraform/getting-started/install.html) create the Cloud Storage Bucket and the Kubernetes Cluster 
 - (Optional) Separate bucket should exist to store Terraform state
 - [gcloud command-line tool](https://cloud.google.com/sdk/docs/quickstarts) for interacting with Google Cloud products and services
-- [kubectl] (https://kubernetes.io/docs/tasks/tools/install-kubectl/) for interacting with k8s cluster
-- [helm] (https://helm.sh/docs/intro/install/) cli to install nexus chart
+- [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/) for interacting with k8s cluster
+- [helm](https://helm.sh/docs/intro/install/) cli to install nexus chart
 
 ## Setup
 
