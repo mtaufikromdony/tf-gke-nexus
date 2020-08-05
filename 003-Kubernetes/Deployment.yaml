@@ -1,0 +1,28 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: nexus
+  namespace: nexus
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: nexus
+    spec:
+      containers:
+      - image: asia.gcr.io/aliz-hw-taufik/nexus3-gcp:0.1
+        imagePullPolicy: Always
+        name: nexus
+        ports:
+        - containerPort: 8081
+        - containerPort: 5000
+        volumeMounts:
+          - name: nexus-volume
+            mountPath: /nexus-data
+      securityContext:
+        fsGroup: 200
+      volumes:
+        - name: nexus-volume
+          persistentVolumeClaim:
+            claimName: myvol
