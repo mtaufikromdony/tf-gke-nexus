@@ -75,7 +75,7 @@ Get the application URL by running these commands:
 
 Here's how it will look like nexus in the browser: ![nexus](003-Kubernetes/capture/nexus.png)
 
-And Artifacts in GCS: ![artifacts](003-Kubernetes/capture/gcs-artifacts.png)
+And Artifacts in GCS:\ ![artifacts](003-Kubernetes/capture/gcs-artifacts.png)
 
 ## CI/CD
 
@@ -84,12 +84,12 @@ The main idea is to have related pipeline file(s) inside source repository with 
 
 The process ended up looking like this:
 
-Code pushed to all branches and pull requests:
+1. Code pushed to all branches and pull requests
 
 Kick off a build on CI Tools (examples: Jenkins)
 Run all unit, integration, and end-to-end tests
 
-Code pushed to master branch only:
+2. Code pushed to master branch only:
 
 - Build a Docker image based on the current code, settings, and environment
 - Deploy the image to Google Container Registry or Docker Hub
