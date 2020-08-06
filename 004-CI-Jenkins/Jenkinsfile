@@ -1,0 +1,24 @@
+pipeline {
+  stages {
+    stage('Cloning Git') {
+      steps {
+        git 'remote/local repository'
+      }
+    }
+    stage('Build') {
+       steps {
+         sh 'docker build --no-cache -t nexus . '
+       }
+    }
+    stage('Tagging') {
+      steps {
+        sh 'docker tag nexus:latest asia.gcr.io/gcp-project/nexus'
+      }
+    }
+    stage('Pushing') {
+      steps{
+        sh 'docker push asia.gcr.io/gcp-project/nexus'
+      }
+    }
+  }
+}
