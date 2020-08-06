@@ -28,6 +28,7 @@ gcloud services enable container.googleapis.com
 ```
 4. Build and push custom docker image to Container Registry
 ```bash
+cd ../001-Container/
 docker build -t asia.gcr.io/gcp-project/nexus3-gcp:0.1 .
 docker push asia.gcr.io/gcp-project/nexus3-gcp:0.1
 ```
@@ -50,6 +51,7 @@ image:
 9. Deploy nexus using `helm` :
 
 ```bash
+cd ../003-Kubernetes/
 helm install --debug  nexus ./nexus
 ```
 or using kubectl to apply deployment
