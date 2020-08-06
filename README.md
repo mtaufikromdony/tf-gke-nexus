@@ -47,6 +47,11 @@ image:
   repository: asia.gcr.io/gcp-project/nexus3-gcp
   tag: "0.1"
 ```
+9. Deploy nexus using `helm` :
+
+```bash
+helm install --debug  nexus ./nexus
+```
 or using kubectl to apply deployment
 ```bash
 cd ../003-Kubernetes/
@@ -55,11 +60,6 @@ kubectl apply -f PersistentVolume.yaml
 kubectl apply -f PersistentVolumeClaim.yaml
 kubectl apply -f Deployment.yaml 
 kubectl apply -f Service.yaml
-```
-9. Deploy nexus using `helm` :
-
-```bash
-helm install --debug  nexus ./nexus
 ```
 
 output
