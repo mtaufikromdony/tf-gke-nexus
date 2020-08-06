@@ -75,7 +75,8 @@ Get the application URL by running these commands:
 
 Here's how it will look like nexus in the browser: ![nexus](003-Kubernetes/capture/nexus.png)
 
-And Artifacts in GCS ![artifacts](003-Kubernetes/capture/gcs-artifacts.png)
+And Artifacts in GCS
+![artifacts](003-Kubernetes/capture/gcs-artifacts.png)
 
 ## CI/CD
 
